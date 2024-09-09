@@ -1,0 +1,246 @@
+/* Limpar a formatação padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #e6e6e6;
+    width: 100%;
+}
+
+/* Layout Geral */
+#area-cabecalho {
+    background-color: #f7b600;
+    padding: 15px;
+    text-align: center;
+}
+
+#area-logo, #area-menu {
+    padding: 10px;
+}
+
+#area-principal {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 1200px; /* Tamanho máximo para telas grandes */
+}
+
+#area-postagens {
+    flex: 1;
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+
+#area-lateral {
+    flex: 0 0 300px;
+    padding-left: 15px;
+}
+
+.postagem {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fbf2f2;
+}
+
+.conteudo-lateral {
+    background-color: #fbf2f2;
+    padding: 20px;
+    border-bottom: 5px solid #000000;
+}
+
+/* Rodapé */
+#rodape {
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    background-color: #c9c5c5;
+    width: 100%;
+}
+
+/* Menu */
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #f7b600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#area-cabecalho a:link, #area-cabecalho a:visited {
+    color: #f5f2f2;
+    padding: 8px 12px;
+}
+
+#area-cabecalho a:hover {
+    color: #f7b600;
+    background-color: #f5f2f2;
+    text-decoration: none;
+}
+
+/* Títulos e Postagens */
+h1 {
+    color: #000000;
+    font-size: 30px;
+}
+
+h2 {
+    color: #f7b600;
+}
+
+h3 {
+    color: #000000;
+    background-color: #fbf2f2;
+    padding: 5px;
+}
+
+.branco {
+    color: #fbf2f2;
+}
+
+.data-postagem {
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f4f4f4;
+    display: block;
+}
+
+/* Seção de Comentários */
+.comment-section {
+    margin-top: 20px;
+    background-color: #fbf2f2;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Formulário de Comentários */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.comment-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment-form input[type="text"], 
+.comment-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    background-color: #f7b600;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.comment-form button:hover {
+    background-color: #e09b00;
+}
+
+.comments-list .comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.comments-list .comment strong {
+    color: #f7b600;
+    font-size: 14px;
+}
+
+.comments-list .comment p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsividade */
+
+/* Tablets e telas menores (até 1024px) */
+@media (max-width: 1024px) {
+    #area-lateral {
+        flex: 1 100%; /* Ocupa a largura total */
+        margin-top: 20px; /* Distância entre a lateral e as postagens */
+    }
+
+    #area-postagens {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    #area-principal {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Smartphones (menos de 768px) */
+@media (max-width: 768px) {
+    #area-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #area-menu a {
+        flex: 1 0 45%; /* Faz com que os links ocupem 45% da largura */
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    #area-lateral {
+        flex: 1 100%; /* Lateral ocupa a largura total */
+        margin-top: 20px;
+    }
+
+    #area-postagens {
+        width: 100%;
+    }
+
+    .postagem img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Smartphones (menos de 480px) */
+@media (max-width: 480px) {
+    #area-cabecalho h1 {
+        font-size: 24px;
+    }
+
+    #area-menu a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #area-principal {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .conteudo-lateral {
+        padding: 20px;
+    }
+}
